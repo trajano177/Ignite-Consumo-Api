@@ -1,0 +1,55 @@
+<tr>
+            <td width="50%">Aluguel do apartamento</td>
+            <td>- R$ 1.200,00</td>
+            <td>Casa</td>
+            <td>27/03/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Computador</td>
+            <td>R$ 5.400,00</td>
+            <td>Venda</td>
+            <td>13/04/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Desenvolvimento do site</td>
+            <td>R$ 8.000,00</td>
+            <td>Venda</td>
+            <td>10/03/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Janta</td>
+            <td>- R$ 39,00</td>
+            <td>Alimentação</td>
+            <td>13/04/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Aluguel do apartamento</td>
+            <td>- R$ 1.200,00</td>
+            <td>Casa</td>
+            <td>27/02/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Salário</td>
+            <td>R$ 5.400,00</td>
+            <td>Salário</td>
+            <td>15/02/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Almoço</td>
+            <td>- R$ 30,00</td>
+            <td>Alimentação</td>
+            <td>05/02/2022</td>
+          </tr>
+
+          <tr>
+            <td width="50%">Fone de ouvido</td>
+            <td>-R$ 150,00</td>
+            <td>Itens</td>
+            <td>02/02/2022</td>
+          </tr>
