@@ -33,7 +33,7 @@ export const Content = styled(Dialog.Content)`
       border-radius: 6px;
       border: 0;
       background: ${props => props.theme["gray-900"]};
-      color: ${props => props.theme["gray-300"]};
+      color: ${props => props.theme["gray-500"]};
       padding: 1rem;
       &::placeholder{
         color: ${props => props.theme["gray-500"]};
