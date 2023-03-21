@@ -11,7 +11,7 @@ input {
   border-radius: 16px;
   border: 0;
   background: ${props => props.theme["gray-900"]};
-  color: ${props => props.theme["gray-300"]};
+  color: ${props => props.theme["gray-500"]};
 
   padding: 1rem;
 }
