@@ -2,7 +2,7 @@
   "transactions": [
     {
       "id": 1,
-      "descrisption": "Desenvolvimento do site",
+      "description": "Desenvolvimento do site",
       "type": "income",
       "category": "Venda",
       "price": 14000,
@@ -11,7 +11,7 @@
 
     {
       "id": 2,
-      "descrisption": "Hamburguer",
+      "description": "Hamburguer",
       "type": "outcome",
       "category": "Alimentação",
       "price": 50,
