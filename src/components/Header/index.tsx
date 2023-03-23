@@ -10,7 +10,7 @@ export function Header() {
         <img src={logoSVG} />
         <Dialog.Root>
           <Dialog.Trigger asChild>
-            <NewTransactionButton> Nova transaçâo</NewTransactionButton>
+            <NewTransactionButton>Nova transaçâo</NewTransactionButton>
           </Dialog.Trigger>
 
           <NewTransactionModal />
