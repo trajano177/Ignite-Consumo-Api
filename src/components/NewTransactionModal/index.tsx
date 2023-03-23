@@ -1,40 +1,50 @@
-import * as Dialog from "@radix-ui/react-dialog";
-import * as z from "zod";
-import { ArrowCircleDown, ArrowCircleUp, X } from "phosphor-react";
+import * as Dialog from '@radix-ui/react-dialog'
+import * as z from 'zod'
+import { ArrowCircleDown, ArrowCircleUp, X } from 'phosphor-react'
 import {
   CloseButton,
   Content,
   Overlay,
   TransactionType,
   TransactionTypeButton,
-} from "./styles";
-import { Controller, useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+} from './styles'
+import { Controller, useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useContext } from 'react'
+import { TransactionsContext } from '../../contexts/TransactionsContext'
 
 const newTransactionFormShema = z.object({
   description: z.string(),
   price: z.number(),
   category: z.string(),
-  type: z.enum(["income", "outcome"]),
-});
-type NewTransactionFormInputs = z.infer<typeof newTransactionFormShema>;
+  type: z.enum(['income', 'outcome']),
+})
+type NewTransactionFormInputs = z.infer<typeof newTransactionFormShema>
 
 export function NewTransactionModal() {
+  const { createTransaction } = useContext(TransactionsContext)
   const {
     control,
     register,
     handleSubmit,
     formState: { isSubmitting },
+    reset,
   } = useForm<NewTransactionFormInputs>({
     resolver: zodResolver(newTransactionFormShema),
     defaultValues: {
-      type: "income",
+      type: 'income',
     },
-  });
+  })
 
   async function handleCreateNewTransaction(data: NewTransactionFormInputs) {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    console.log(data);
+    const { description, price, category, type } = data
+    await createTransaction({
+      description,
+      price,
+      category,
+      type,
+    })
+    reset()
   }
   return (
     <Dialog.Portal>
@@ -50,21 +60,21 @@ export function NewTransactionModal() {
             type="text"
             placeholder="Descrição"
             required
-            {...register("description")}
+            {...register('description')}
           />
 
           <input
             type="number"
             placeholder="Preço"
             required
-            {...register("price", { valueAsNumber: true })}
+            {...register('price', { valueAsNumber: true })}
           />
 
           <input
             type="text"
             placeholder="Categoria"
             required
-            {...register("category")}
+            {...register('category')}
           />
 
           <Controller
@@ -86,16 +96,16 @@ export function NewTransactionModal() {
                     Saída
                   </TransactionTypeButton>
                 </TransactionType>
-              );
+              )
             }}
           />
 
           <button type="submit" disabled={isSubmitting}>
-            {" "}
+            {' '}
             Cadastrar
           </button>
         </form>
       </Content>
     </Dialog.Portal>
-  );
+  )
 }

@@ -8,7 +8,6 @@
       "price": 14000,
       "createdAt": "2023-03-19T15:43:27.371Z"
     },
-
     {
       "id": 2,
       "description": "Hamburguer",
@@ -16,6 +15,22 @@
       "category": "Alimentação",
       "price": 50,
       "createdAt": "2023-03-19T15:41:27.371Z"
+    },
+    {
+      "description": "suco",
+      "price": 1233,
+      "category": "alimentação",
+      "type": "outcome",
+      "createdAt": "2023-03-23T15:07:52.436Z",
+      "id": 3
+    },
+    {
+      "description": "banana",
+      "price": 12,
+      "category": "alimentação",
+      "type": "income",
+      "createdAt": "2023-03-23T15:30:36.029Z",
+      "id": 4
     }
   ]
 }
