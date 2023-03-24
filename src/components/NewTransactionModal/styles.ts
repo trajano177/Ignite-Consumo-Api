@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as Dialog from '@radix-ui/react-dialog'
 import styled from 'styled-components'
 import * as RadioGroup from '@radix-ui/react-radio-group'
@@ -81,13 +82,11 @@ export const TransactionType = styled(RadioGroup.Root)`
   margin-top: 0.5rem;
 `
 
-interface TransactionTypeProps {
+interface TransactionTypeButtonProps {
   variant: 'income' | 'outcome'
 }
-
-export const TransactionTypeButton = styled(
-  RadioGroup.Item,
-) <TransactionTypeProps>`
+// eslint-disable-next-line prettier/prettier
+export const TransactionTypeButton = styled(RadioGroup.Item) <TransactionTypeButtonProps>`
   background: ${(props) => props.theme['gray-700']};
   padding: 1rem;
   display: flex;
@@ -100,19 +99,20 @@ export const TransactionTypeButton = styled(
   color: ${(props) => props.theme['gray-300']};
 
   svg {
-  color: ${(props) =>
+    color: ${(props) =>
     props.variant === 'income'
       ? props.theme['green-300']
       : props.theme['red-300']};
   }
 
   &[data-state='unchecked']:hover {
-    transition: background-color 0.2s;
     background: ${(props) => props.theme['gray-600']};
+    transition: background-color 0.2s;
+  }
 
   &[data-state='checked'] {
     color: ${(props) => props.theme.white};
-  background: ${(props) =>
+    background: ${(props) =>
     props.variant === 'income'
       ? props.theme['green-500']
       : props.theme['red-500']};
